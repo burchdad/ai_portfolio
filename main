@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stephen Burch | AI & Automation Specialist</title>
+  <style>
+    body {
+      background-color: #0e0e0e;
+      color: #f1f1f1;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    h1, h2 {
+      color: #00ffd0;
+    }
+    a {
+      color: #00ff99;
+      text-decoration: none;
+    }
+    .project {
+      border-left: 4px solid #00ffd0;
+      padding-left: 15px;
+      margin: 20px 0;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #00ff99;
+      color: #000;
+      font-weight: bold;
+      border-radius: 6px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Stephen Burch</h1>
+    <p><strong>AI & Automation Specialist | GPT Systems Architect | Zapier + CRM Expert</strong></p>
+
+    <h2>About Me</h2>
+    <p>I specialize in building AI-powered sales funnels, automation workflows, and data-enriched CRM systems using tools like OpenAI (GPT), Zapier, Airtable, Stripe, Twilio, and People Data Labs. My systems help businesses eliminate manual lead gen, qualify prospects faster, and convert sales automatically.</p>
+
+    <h2>Key Skills</h2>
+    <ul>
+      <li>AI Workflow Design & Prompt Engineering</li>
+      <li>GPT-Driven Email, SMS, and Lead Follow-Up Systems</li>
+      <li>CRM Integration (Airtable, HubSpot, Mailchimp)</li>
+      <li>Stripe Automation + Zapier Flows</li>
+      <li>Lead Enrichment with People Data Labs & Apollo</li>
+    </ul>
+
+    <h2>Featured Projects</h2>
+
+    <div class="project">
+      <h3>Ghost AI Sales Funnel</h3>
+      <p>Designed and deployed a fully automated sales funnel with GPT intake form, Stripe payment gateway, lead enrichment via People Data Labs, and CRM tracking through Airtable and Zapier. Includes dynamic follow-up via Twilio (SMS) and GPT-generated summaries.</p>
+      <a class="btn" href="https://burchdad.github.io/ai_sales_funnel/" target="_blank">View Project</a>
+    </div>
+
+    <div class="project">
+      <h3>Real Estate AI Outreach Bot</h3>
+      <p>Built a custom outreach automation targeting motivated sellers using Apollo data + GPT scripts. System filters leads, follows up with AI-generated responses, and books appointments into Calendly.</p>
+    </div>
+
+    <div class="project">
+      <h3>Financial Advisor AI Client System</h3>
+      <p>Created an automated onboarding + lead follow-up pipeline for a financial advisor. The system integrates a quiz, lead classification, and sends tailored follow-up messages based on interest and financial goals.</p>
+    </div>
+
+    <div class="project">
+      <h3>Stripe-Triggered AI Scan Delivery</h3>
+      <p>Built a complete funnel where a Stripe payment triggers webhook flows that enrich data, generate a GPT-written email summary, produce a PDF scan report, and archive results in Google Drive.</p>
+    </div>
+
+    <div class="project">
+      <h3>GhostMIND AI CEO Agent</h3>
+      <p>Developed an AI CEO interface that spawns subordinate agents in Airtable, assigns tasks dynamically, and manages outreach systems with Zapier automation — enabling near-zero human overhead.</p>
+    </div>
+
+    <div class="project">
+      <h3>AI Agent Auto-Builder System</h3>
+      <p>Currently developing an automated system that allows GhostMIND to create fully functional AI agents from a single command. Includes dynamic task assignment, training deployment, and CRM lead routing.</p>
+    </div>
+
+    <div class="project">
+      <h3>Ghost Finance Bot (In Progress)</h3>
+      <p>Building a personal AI-powered CFO system capable of managing budgets, tracking debts, planning financial goals, and automating payment reminders across multiple sources. Integrates banking APIs and future AI decision logic.</p>
+    </div>
+
+    <div class="project">
+      <h3>AI Gym & Nutrition Tracker</h3>
+      <p>Developed an AI-powered system that generates personalized meal and workout plans based on caloric needs, fitness goals, and equipment availability. Integrated with Project Lean Nation macros, garage equipment, and Google Sheets tracking.</p>
+    </div>
+
+    <div class="project">
+      <h3>No One Unserved (NOU) Nonprofit Infrastructure</h3>
+      <p>Drafted the AI-integrated foundation of a nonprofit focused on sports funding for underserved youth. Includes automated lead intake, CRM tracking, and donation coordination.</p>
+    </div>
+
+    <div class="project">
+      <h3>Daily Discipline & Wellness AI Tracker</h3>
+      <p>Created a system that combines Bible reading, weight tracking, mindset reminders, and personal priorities into a daily visual lock screen background using AI + automation tools.</p>
+    </div>
+
+    <h2>Professional Experience</h2>
+
+    <div class="project">
+      <h3>Custom Software Engineering Sr. Analyst – Accenture Federal Services</h3>
+      <p>Worked on enterprise-scale SAP BW and HANA systems, including federal deployments for the U.S. Department of Defense and U.S. Department of Agriculture. Responsibilities included data transformation design, system transport configuration, and technical troubleshooting across environments.</p>
+    </div>
+
+    <div class="project">
+      <h3>Project: USDA Data Warehouse Modernization</h3>
+      <p>Supported the transition of legacy BW systems into a modernized SAP HANA environment. Automated ETL workflows, enhanced data extraction performance, and aligned backend models with agency reporting needs.</p>
+    </div>
+
+    <div class="project">
+      <h3>Project: U.S. Department of Defense Analytics Platform</h3>
+      <p>Contributed to a secure, scalable data analytics platform using SAP HANA to support logistics, readiness, and operational intelligence. Played a critical role in performance tuning and transport lifecycle management.</p>
+    </div>
+
+    <div class="project">
+      <h3>Cloud & DevOps Integration (Internal)</h3>
+      <p>Collaborated with cross-functional teams to evaluate and prototype AI integrations using cloud infrastructure. Contributed to knowledge-sharing on GPT models, automation workflows, and emerging AI tools within Accenture's innovation community.</p>
+    </div>
+
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:stephen.burch@ghostdefenses.com">stephen.burch@ghostdefenses.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/stephen-burch">https://www.linkedin.com/in/stephen-burch</a></p>
+    <p>Calendly: <a href="https://calendly.com/stephen-burch-ghostdefenses/30min">Book a Strategy Call</a></p>
+  </div>
+</body>
+</html>
