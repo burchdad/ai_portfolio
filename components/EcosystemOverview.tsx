@@ -6,17 +6,17 @@ export default function EcosystemOverview() {
   return (
     <div className="w-full">
       <motion.div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">
-          Ghost AI Ecosystem
+        <h2 className="mb-4">
+          <span className="gradient-text">🧠 Ghost AI Ecosystem</span>
         </h2>
-        <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-          A complete autonomous AI operating system designed to replace entire business functions
+        <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          A complete autonomous AI operating system designed to replace entire business functions with intelligent agents working 24/7
         </p>
       </motion.div>
 
       {/* Ecosystem Diagram */}
       <motion.div
-        className="bg-ghost-gray/30 border border-ghost-green/20 rounded-lg p-8 overflow-auto"
+        className="card-base"
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}

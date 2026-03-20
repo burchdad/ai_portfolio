@@ -7,12 +7,12 @@ import SystemCard from './SystemCard';
 export default function Tier2Systems() {
   return (
     <div className="w-full">
-      <motion.div className="mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          <span className="text-ghost-blue">⚙️ Tier 2: Specialized Systems</span>
+      <motion.div className="mb-16">
+        <h2 className="mb-4">
+          <span className="gradient-text">⚙️ Tier 2: Specialized Systems</span>
         </h2>
-        <p className="text-gray-400 text-lg">
-          Enhanced capabilities that plug into and extend the core platforms
+        <p className="text-lg text-gray-300 max-w-3xl">
+          Advanced tools that extend and enhance the core platforms. Each specializes in a specific function while maintaining deep integration with the Ghost ecosystem.
         </p>
       </motion.div>
 

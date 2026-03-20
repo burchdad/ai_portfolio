@@ -7,16 +7,16 @@ import SystemCard from './SystemCard';
 export default function Tier1Systems() {
   return (
     <div className="w-full">
-      <motion.div className="mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          <span className="text-ghost-green">🧠 Tier 1: Core Platforms</span>
+      <motion.div className="mb-16">
+        <h2 className="mb-4">
+          <span className="gradient-text">🧠 Tier 1: Core Platforms</span>
         </h2>
-        <p className="text-gray-400 text-lg">
-          The flagship systems that form the foundation of the Ghost ecosystem
+        <p className="text-lg text-gray-300 max-w-3xl">
+          The flagship systems that form the foundation of the Ghost ecosystem. These four core platforms orchestrate everything—autonomous agents working 24/7 to replace entire business functions.
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid-systems">
         {ecosystemData.tier1.map((system, idx) => (
           <motion.div
             key={system.id}

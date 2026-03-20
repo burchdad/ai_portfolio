@@ -41,50 +41,69 @@ export default function SystemCard({ system }: SystemCardProps) {
 
   return (
     <motion.div
-      className={`group bg-ghost-gray/20 border ${tierColors[system.tier as keyof typeof tierColors]} rounded-lg p-6 hover-lift ${tierBgHover[system.tier as keyof typeof tierBgHover]} transition-all duration-300`}
+      className={`card-tier-${system.tier} group`}
       whileHover={{ scale: 1.02 }}
+      transition={{ type: 'spring', stiffness: 300, damping: 20 }}
     >
       {/* Header */}
       <div className="mb-4">
-        <h3 className="text-xl font-bold mb-2">{system.name}</h3>
-        <p className="text-sm font-semibold text-ghost-green mb-2">{system.role}</p>
-        {system.longDescription ? (
-          <p className="text-sm text-gray-300 leading-relaxed mb-3">{system.longDescription}</p>
-        ) : (
-          <p className="text-sm text-gray-400">{system.description}</p>
-        )}
+        <h3 className="text-2xl font-bold mb-2 text-white group-hover:text-ghost-green transition-colors">
+          {system.name}
+        </h3>
+        <p className="text-sm font-semibold text-ghost-green mb-3">{system.role}</p>
       </div>
 
+      {/* Long or short description */}
+      {system.longDescription ? (
+        <div className="mb-4 space-y-2 text-sm">
+          {system.longDescription.split('\n').map((line, idx) => {
+            if (line.startsWith('WHAT:')) {
+              return <p key={idx} className="text-gray-300"><span className="text-ghost-green font-semibold">WHAT:</span> {line.replace('WHAT:', '').trim()}</p>;
+            }
+            if (line.startsWith('WHY:')) {
+              return <p key={idx} className="text-gray-300"><span className="text-ghost-blue font-semibold">WHY:</span> {line.replace('WHY:', '').trim()}</p>;
+            }
+            if (line.startsWith('IMPACT:')) {
+              return <p key={idx} className="text-gray-300"><span className="text-ghost-lime font-semibold">IMPACT:</span> {line.replace('IMPACT:', '').trim()}</p>;
+            }
+            return <p key={idx} className="text-gray-400">{line}</p>;
+          })}
+        </div>
+      ) : (
+        <p className="text-sm text-gray-400 mb-4">{system.description}</p>
+      )}
+
       {/* Status Badge */}
-      <div className="mb-4">
+      <div className="mb-5">
         <span
-          className={`inline-block px-3 py-1 rounded-full text-xs font-semibold border ${statusColors[system.status as keyof typeof statusColors]}`}
+          className={`badge ${statusColors[system.status as keyof typeof statusColors]}`}
         >
+          <span className="w-2 h-2 bg-current rounded-full" />
           {system.status}
         </span>
       </div>
 
-      {/* Features */}
-      <div className="mb-4">
-        <h4 className="text-xs font-bold text-ghost-lime mb-2 uppercase">Features</h4>
-        <ul className="space-y-1">
+      {/* Features - SCANNABLE */}
+      <div className="mb-5 pb-5 border-b border-ghost-green/10">
+        <h4 className="text-xs font-bold text-ghost-lime mb-3 uppercase tracking-wider">Features</h4>
+        <ul className="space-y-2">
           {system.features.slice(0, 4).map((feature, idx) => (
             <li key={idx} className="text-xs text-gray-400 flex items-start">
-              <span className="text-ghost-green mr-2">•</span>
-              {feature}
+              <span className="text-ghost-green font-bold mr-2 flex-shrink-0">▸</span>
+              <span>{feature}</span>
             </li>
           ))}
         </ul>
       </div>
 
       {/* Stack */}
-      <div className="mb-4">
-        <h4 className="text-xs font-bold text-ghost-blue mb-2 uppercase">Stack</h4>
+      <div className="mb-6">
+        <h4 className="text-xs font-bold text-ghost-blue mb-3 uppercase tracking-wider">Tech Stack</h4>
         <div className="flex flex-wrap gap-2">
           {system.stack.map((tech, idx) => (
             <span
               key={idx}
-              className="px-2 py-1 bg-ghost-gray/50 border border-ghost-green/20 rounded text-xs text-ghost-green"
+              className="px-3 py-1 bg-ghost-green/10 border border-ghost-green/30 rounded-full text-xs text-ghost-green font-medium hover:bg-ghost-green/20 transition-colors"
             >
               {tech}
             </span>
@@ -92,16 +111,16 @@ export default function SystemCard({ system }: SystemCardProps) {
         </div>
       </div>
 
-      {/* Repository Link */}
+      {/* Repository Link - Premium CTA */}
       <motion.a
         href={system.repoUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-block w-full text-center px-4 py-2 mt-4 bg-ghost-green/10 border border-ghost-green rounded-lg text-ghost-green hover:bg-ghost-green/20 transition-all text-sm font-semibold"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
+        className="block w-full text-center btn-secondary"
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.98 }}
       >
-        View Repository →
+        View Repository ↗
       </motion.a>
     </motion.div>
   );

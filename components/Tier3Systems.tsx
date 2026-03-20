@@ -7,12 +7,12 @@ import SystemCard from './SystemCard';
 export default function Tier3Systems() {
   return (
     <div className="w-full">
-      <motion.div className="mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          <span className="text-purple-500">🧪 Tier 3: Experimental R&D</span>
+      <motion.div className="mb-16">
+        <h2 className="mb-4">
+          <span className="gradient-text-alt">🧬 Tier 3: Experimental R&D</span>
         </h2>
-        <p className="text-gray-400 text-lg">
-          Cutting-edge research projects pushing the boundaries of what's possible
+        <p className="text-lg text-gray-300 max-w-3xl">
+          Cutting-edge research projects pushing the boundaries of autonomous AI. These systems explore the future of self-improving, fully autonomous business platforms.
         </p>
       </motion.div>
 
