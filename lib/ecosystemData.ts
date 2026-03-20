@@ -1,9 +1,11 @@
 export const ecosystemData = {
   hero: {
     name: "Stephen Burch",
-    title: "AI Architect | Autonomous Systems Builder",
+    title: "Building Autonomous AI Systems That Replace Entire Business Functions",
     subtitle: "Founder of Ghost AI",
-    bio: "I design and deploy self-operating AI systems for lead generation, sales automation, financial intelligence, and autonomous voice orchestration.",
+    bio: "I design and deploy AI-powered platforms that automate sales, generate leads, optimize credit intelligence, and orchestrate voice-based AI. The Ghost ecosystem is a complete autonomous operating system for businesses.",
+    cta1: "Explore Ecosystem",
+    cta2: "View on GitHub",
   },
   
   tier1: [
@@ -13,6 +15,7 @@ export const ecosystemData = {
       shortName: "GhostMIND",
       role: "AI CEO / Orchestrator",
       description: "Central command center for multi-agent orchestration",
+      longDescription: "WHAT: Multi-agent orchestration engine that coordinates all Ghost systems as one unified AI CEO. WHY: Businesses need a single decision-making layer that controls, prioritizes, and routes tasks across AI agents. IMPACT: Turns disconnected AI tools into a single autonomous business operator.",
       features: [
         "Command interface for agent spawning",
         "Task routing & decision logic",
@@ -31,6 +34,7 @@ export const ecosystemData = {
       shortName: "GhostCRM",
       role: "AI-Native Revenue Engine",
       description: "Sales automation & lead management platform",
+      longDescription: "WHAT: AI-powered CRM that automatically qualifies leads, sends follow-ups, and manages entire sales pipelines without human intervention. WHY: Sales teams waste 60% of time on admin work. GhostCRM eliminates that. IMPACT: Businesses close more deals 5x faster with AI handling discovery, qualification, and nurturing.",
       features: [
         "AI-powered lead tracking",
         "Automated follow-ups",
@@ -50,6 +54,7 @@ export const ecosystemData = {
       shortName: "GhostScore",
       role: "Financial Intelligence Engine",
       description: "Credit optimization & FICO simulation",
+      longDescription: "WHAT: AI engine that simulates credit score changes and recommends specific actions to improve FICO scores and financial health. WHY: Users don't know how to improve credit—this automates the strategy. IMPACT: Helps thousands optimize credit faster, qualify for loans, and understand financial leverage points.",
       features: [
         "FICO scoring simulations",
         "Credit optimization strategies",
@@ -69,6 +74,7 @@ export const ecosystemData = {
       shortName: "Voice OS",
       role: "Human-AI Interaction Layer",
       description: "Real-time voice AI & conversational agent system",
+      longDescription: "WHAT: Real-time voice AI system that answers calls, books appointments, and handles customer conversations with natural language comprehension. WHY: Businesses need 24/7 AI handling phone calls and customer interactions. IMPACT: Replaces entire customer service teams with AI that works 24/7, 365 days a year.",
       features: [
         "Real-time voice processing",
         "Streaming text-to-speech",
@@ -232,6 +238,80 @@ export const ecosystemData = {
       stack: ["Python"],
       tier: 3,
     },
+  ],
+
+  solutions: [
+    {
+      id: "sales-automation",
+      icon: "💼",
+      title: "AI Sales Systems",
+      subtitle: "Automated lead-to-close pipeline",
+      description: "End-to-end sales automation powered by GhostMIND and GhostCRM. AI qualifies leads, sends follow-ups, schedules calls, and tracks pipeline—all without human touch.",
+      impact: "5x faster lead conversion | 80% less manual work",
+      use_case: "SaaS, e-commerce, B2B service businesses"
+    },
+    {
+      id: "voice-agents",
+      icon: "🎙️",
+      title: "AI Voice Agents",
+      subtitle: "24/7 autonomous customer interaction",
+      description: "AI that answers calls, books appointments, handles customer service, and qualifies leads via natural conversation. Powered by Ghost Voice OS.",
+      impact: "24/7 availability | Replaces call center staff",
+      use_case: "Customer service, appointment booking, lead qualification"
+    },
+    {
+      id: "credit-intelligence",
+      icon: "💳",
+      title: "Credit Intelligence Tools",
+      subtitle: "AI-powered financial optimization",
+      description: "GhostScore gives users actionable intelligence on credit optimization, helping them understand financial leverage points and improve credit faster.",
+      impact: "Faster credit improvement | Better financial decisions",
+      use_case: "FinTech, lending platforms, personal finance apps"
+    },
+    {
+      id: "custom-ai",
+      icon: "⚙️",
+      title: "Custom AI Automation",
+      subtitle: "Tailored autonomous systems",
+      description: "Build custom AI agents and workflows using Ghost infrastructure. Connect to Zapier, APIs, databases, or any business tool. Scale your operations autonomously.",
+      impact: "Cost savings | Scalability | Business automation",
+      use_case: "Any business process that needs automation"
+    }
+  ],
+
+  rdVision: [
+    {
+      id: "autonomous-coding",
+      icon: "👨‍💻",
+      title: "Autonomous Coding Agent",
+      subtitle: "Piddy - Self-operating developer",
+      description: "AI that writes, tests, and improves code autonomously. Self-healing architecture with multi-model fallback. The future of software development.",
+      status: "Active Development"
+    },
+    {
+      id: "offline-ai",
+      icon: "🔌",
+      title: "Offline AI Systems",
+      subtitle: "USB-deployable autonomous AI",
+      description: "AI systems that run completely offline on edge devices. No cloud dependency. Deploy to hardware, USB drives, or embedded systems.",
+      status: "In Research"
+    },
+    {
+      id: "multi-agent",
+      icon: "🧬",
+      title: "Multi-Agent Orchestration",
+      subtitle: "Emergent AI coordination",
+      description: "Advanced orchestration systems where AI agents coordinate autonomously, negotiate tasks, and self-optimize as a collective.",
+      status: "In Development"
+    },
+    {
+      id: "self-improving",
+      icon: "🚀",
+      title: "Self-Improving Pipelines",
+      subtitle: "AI that evolves autonomously",
+      description: "AI systems that learn, adapt, and improve continuously without human retraining. The foundation of truly autonomous business systems.",
+      status: "Research Phase"
+    }
   ],
 
   infrastructure: [

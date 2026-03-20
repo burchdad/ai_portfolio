@@ -46,9 +46,9 @@ export default function Navigation() {
           <div className="hidden md:flex gap-8">
             {[
               { label: 'Ecosystem', id: 'ecosystem' },
-              { label: 'Tier 1', id: 'tier1' },
-              { label: 'Tier 2', id: 'tier2' },
-              { label: 'Tier 3', id: 'tier3' },
+              { label: 'Solutions', id: 'solutions' },
+              { label: 'Systems', id: 'tier1' },
+              { label: 'R&D', id: 'rd-vision' },
               { label: 'Tech', id: 'infrastructure' },
             ].map((link) => (
               <motion.a

@@ -8,6 +8,8 @@ import Tier1Systems from '@/components/Tier1Systems';
 import Tier2Systems from '@/components/Tier2Systems';
 import Tier3Systems from '@/components/Tier3Systems';
 import Infrastructure from '@/components/Infrastructure';
+import Solutions from '@/components/Solutions';
+import RDVision from '@/components/RDVision';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -30,6 +32,18 @@ export default function Home() {
           viewport={{ once: true }}
         >
           <EcosystemOverview />
+        </motion.section>
+
+        {/* Solutions */}
+        <motion.section
+          id="solutions"
+          className="mb-32"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <Solutions />
         </motion.section>
 
         {/* Tier 1 Systems */}
@@ -66,6 +80,18 @@ export default function Home() {
           viewport={{ once: true }}
         >
           <Tier3Systems />
+        </motion.section>
+
+        {/* R&D Vision */}
+        <motion.section
+          id="rd-vision"
+          className="mb-32"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <RDVision />
         </motion.section>
 
         {/* Infrastructure */}

@@ -42,7 +42,7 @@ export default function Hero() {
 
         {/* Title */}
         <motion.div variants={itemVariants} className="mb-6">
-          <p className="text-2xl md:text-3xl font-semibold text-ghost-green mb-2">
+          <p className="text-2xl md:text-3xl font-semibold text-ghost-green mb-4">
             {ecosystemData.hero.title}
           </p>
           <p className="text-lg text-ghost-blue font-medium">

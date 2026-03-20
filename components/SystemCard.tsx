@@ -8,6 +8,7 @@ type System = {
   shortName: string;
   role: string;
   description: string;
+  longDescription?: string;
   features: string[];
   repo: string;
   repoUrl: string;
@@ -47,7 +48,11 @@ export default function SystemCard({ system }: SystemCardProps) {
       <div className="mb-4">
         <h3 className="text-xl font-bold mb-2">{system.name}</h3>
         <p className="text-sm font-semibold text-ghost-green mb-2">{system.role}</p>
-        <p className="text-sm text-gray-400">{system.description}</p>
+        {system.longDescription ? (
+          <p className="text-sm text-gray-300 leading-relaxed mb-3">{system.longDescription}</p>
+        ) : (
+          <p className="text-sm text-gray-400">{system.description}</p>
+        )}
       </div>
 
       {/* Status Badge */}
