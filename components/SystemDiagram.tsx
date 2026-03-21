@@ -41,68 +41,55 @@ export default function SystemDiagram() {
 
         {/* ASCII Diagram with Glow Effect */}
         <motion.div
-          className="relative bg-gradient-to-b from-ghost-green/5 to-ghost-blue/5 border border-ghost-green/20 rounded-3xl p-12 md:p-20 overflow-hidden"
+          className="relative bg-ghost-gray/20 border border-ghost-green/20 rounded-2xl p-12 md:p-16 overflow-hidden"
           variants={boxVariants}
         >
-          {/* Background glow elements */}
-          <div className="absolute inset-0 opacity-30">
-            <div className="absolute top-0 left-1/2 w-96 h-96 bg-ghost-green/10 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2" />
-            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-ghost-blue/10 rounded-full blur-3xl transform translate-y-1/2" />
+          {/* Subtle background glow */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-ghost-green/10 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2" />
           </div>
 
           {/* Content */}
           <div className="relative z-10 font-mono text-sm md:text-base text-gray-300 overflow-x-auto">
-            <pre className="whitespace-pre text-center leading-relaxed">
+            <pre className="whitespace-pre text-center leading-relaxed text-ghost-lime">
 {`
-     ╭─────────────────────────────────────╮
-     │                                     │
-     │    🧠 GHOSTMIND                    │
-     │    (AI CEO Orchestrator)           │
-     │                                     │
-     │    • Multi-Agent Control           │
-     │    • Decision Engine               │
-     │    • Task Routing                  │
-     │                                     │
-     ╰─────────────────────────────────────╯
-                      │
-            ┌─────────┼─────────┐
-            │         │         │
-            ▼         ▼         ▼
+   ╭──────────────────────────────────────╮
+   │                                      │
+   │         🧠 GHOSTMIND                │
+   │     Multi-Agent Orchestrator        │
+   │                                      │
+   ╰──────────────────────────────────────╯
+                  │
+         ┌────────┼────────┐
+         │        │        │
+         ▼        ▼        ▼
 
-     ╭──────────╮ ╭──────────╮ ╭──────────╮
-     │          │ │          │ │          │
-     │ 📊 CRM   │ │ 💳 SCORE │ │ 🎙️ VOICE│
-     │          │ │          │ │          │
-     │ Revenue  │ │ Financial│ │ AI Voice │
-     │ Engine   │ │ Intel    │ │ Agents   │
-     │          │ │          │ │          │
-     ╰──────────╯ ╰──────────╯ ╰──────────╯
-            │         │         │
-            └─────────┼─────────┘
-                      │
-            ╭─────────▼─────────╮
-            │                   │
-            │  📈 RESULTS       │
-            │                   │
-            │  • 5x Conversions │
-            │  • 24/7 Ops       │
-            │  • Autonomous     │
-            │                   │
-            ╰───────────────────╯
+   ╭─────────╮ ╭─────────╮ ╭─────────╮
+   │         │ │         │ │         │
+   │ 📊 CRM  │ │ 💳 AI   │ │ 🎙️ VOICE│
+   │ Revenue │ │ Finance │ │ Agents  │
+   │         │ │         │ │         │
+   ╰─────────╯ ╰─────────╯ ╰─────────╯
+         │        │        │
+         └────────┼────────┘
+                  │
+              AUTONOMOUS
+           BUSINESS OPERATIONS
+              24/7 · AI-DRIVEN
 `}
             </pre>
           </div>
 
-          {/* Decorative corner glows */}
+          {/* Decorative elements */}
           <motion.div
-            className="absolute top-4 right-4 w-2 h-2 bg-ghost-green rounded-full opacity-60"
-            animate={{ opacity: [0.6, 1, 0.6] }}
-            transition={{ duration: 2, repeat: Infinity }}
+            className="absolute bottom-4 right-4 w-2 h-2 bg-ghost-green rounded-full"
+            animate={{ opacity: [0.4, 1, 0.4] }}
+            transition={{ duration: 3, repeat: Infinity }}
           />
           <motion.div
-            className="absolute bottom-4 left-4 w-2 h-2 bg-ghost-blue rounded-full opacity-60"
-            animate={{ opacity: [0.6, 1, 0.6] }}
-            transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+            className="absolute top-4 left-4 w-2 h-2 bg-ghost-blue rounded-full"
+            animate={{ opacity: [0.6, 0.2, 0.6] }}
+            transition={{ duration: 2.5, repeat: Infinity }}
           />
         </motion.div>
 

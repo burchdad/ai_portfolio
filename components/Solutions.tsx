@@ -52,59 +52,49 @@ export default function Solutions() {
       </motion.div>
 
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 gap-6"
+        className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
       >
-        {ecosystemData.solutions.map((solution) => (
+        {ecosystemData.solutions.slice(0, 4).map((solution) => (
           <motion.div
             key={solution.id}
-            className="group relative rounded-2xl border border-ghost-green/20 bg-gradient-to-br from-ghost-dark/80 to-ghost-dark/40 p-6 hover:border-ghost-green/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-ghost-green/10"
+            className="group relative rounded-xl border border-ghost-green/20 bg-ghost-gray/20 p-8 hover:border-ghost-green/40 transition-all duration-300 hover:-translate-y-1"
             variants={itemVariants}
           >
-            {/* Gradient background on hover */}
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-5 bg-gradient-to-br from-ghost-green to-ghost-blue rounded-2xl transition-opacity duration-300 pointer-events-none" />
-
             {/* Content */}
             <div className="relative z-10">
               {/* Icon & Title */}
-              <div className="mb-4">
-                <p className="text-4xl mb-3">{solution.icon}</p>
+              <div className="mb-5">
+                <p className="text-5xl mb-3">{solution.icon}</p>
                 <h3 className="text-xl font-bold text-white mb-1 group-hover:text-ghost-green transition-colors">
                   {solution.title}
                 </h3>
-                <p className="text-sm text-ghost-lime font-semibold">
-                  {solution.subtitle}
-                </p>
               </div>
 
-              {/* Key takeaway bullets */}
-              <div className="mb-5 text-sm text-gray-300 space-y-2 line-clamp-3">
-                {solution.description.split('.').slice(0, 2).map((bullet, idx) => 
-                  bullet.trim() && (
-                    <div key={idx} className="flex items-start gap-2">
-                      <span className="text-ghost-green mt-1">•</span>
-                      <span>{bullet.trim()}</span>
-                    </div>
-                  )
-                )}
-              </div>
+              {/* Impact */}
+              <p className="text-sm text-ghost-lime font-semibold mb-4">
+                💡 {solution.impact}
+              </p>
 
-              {/* Impact Badge */}
-              <div className="mb-5 inline-flex items-center gap-2 px-3 py-2 rounded-full bg-ghost-green/10 border border-ghost-green/30">
-                <span className="text-xs font-bold text-ghost-green">
-                  💡 {solution.impact}
-                </span>
-              </div>
+              {/* Key bullets - max 3 */}
+              <ul className="space-y-2 text-sm text-gray-300 mb-6">
+                {solution.description.split('.').slice(0, 3).map((text, idx) => {
+                  const bullet = text.trim();
+                  return bullet ? (
+                    <li key={idx} className="flex gap-2">
+                      <span className="text-ghost-green flex-shrink-0">▸</span>
+                      <span>{bullet}</span>
+                    </li>
+                  ) : null;
+                })}
+              </ul>
 
-              {/* Best for */}
-              <div className="flex items-center justify-between pt-4 border-t border-ghost-green/10">
-                <p className="text-xs text-gray-400">
-                  👥 {solution.use_case}
-                </p>
-                <span className="text-ghost-green text-lg group-hover:translate-x-1 transition-transform">→</span>
+              {/* Use case footer */}
+              <div className="pt-4 border-t border-ghost-green/10 text-xs text-gray-400">
+                👥 {solution.use_case}
               </div>
             </div>
           </motion.div>
