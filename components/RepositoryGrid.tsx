@@ -85,6 +85,33 @@ const repositories: Repository[] = [
     status: 'Development',
     stack: ['TypeScript', 'Supabase'],
   },
+  {
+    name: 'Investor Command Center',
+    shortName: 'Investor Terminal',
+    description: 'Experimental multi-agent investment oversight system. Real-time portfolio tracking and deal flow.',
+    repoUrl: 'https://github.com/burchdad/investor-command-center',
+    tier: 3,
+    status: 'Experimental',
+    stack: ['Python', 'FastAPI'],
+  },
+  {
+    name: 'TLDR Agent',
+    shortName: 'TLDR Agent',
+    description: 'Autonomous document analysis and summarization. PDF parsing with AI-driven key insights extraction.',
+    repoUrl: 'https://github.com/burchdad/tldr-agent-demo',
+    tier: 3,
+    status: 'Experimental',
+    stack: ['TypeScript', 'OpenAI'],
+  },
+  {
+    name: 'Piddy Growth',
+    shortName: 'Piddy Growth',
+    description: 'Self-improving agent learning system. Continuous skill acquisition and performance optimization.',
+    repoUrl: 'https://github.com/burchdad/piddy-growth',
+    tier: 3,
+    status: 'Experimental',
+    stack: ['Python'],
+  },
 ];
 
 const tierColors = {
@@ -108,6 +135,7 @@ const statusColors = {
 export default function RepositoryGrid() {
   const tier1 = repositories.filter(r => r.tier === 1);
   const tier2 = repositories.filter(r => r.tier === 2);
+  const tier3 = repositories.filter(r => r.tier === 3);
 
   const RepoCard = ({ repo }: { repo: Repository }) => (
     <motion.a
@@ -121,7 +149,7 @@ export default function RepositoryGrid() {
       {/* Gradient overlay on hover */}
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg pointer-events-none"
         style={{
-          background: repo.tier === 1 ? 'rgba(16, 255, 150, 0.05)' : 'rgba(16, 200, 255, 0.05)'
+          background: repo.tier === 1 ? 'rgba(16, 255, 150, 0.05)' : repo.tier === 2 ? 'rgba(16, 200, 255, 0.05)' : 'rgba(168, 85, 247, 0.05)'
         }}
       />
 
@@ -197,7 +225,7 @@ export default function RepositoryGrid() {
       </div>
 
       {/* Tier 2 */}
-      <div>
+      <div className="mb-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -212,6 +240,28 @@ export default function RepositoryGrid() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {tier2.map((repo) => (
+              <RepoCard key={repo.shortName} repo={repo} />
+            ))}
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Tier 3 */}
+      <div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <div className="mb-8">
+            <h2 className="text-3xl font-bold mb-2">
+              <span className="text-purple-400">🧪</span> Tier 3: R&D & Experimental
+            </h2>
+            <p className="text-gray-400">Research Projects & Prototypes</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {tier3.map((repo) => (
               <RepoCard key={repo.shortName} repo={repo} />
             ))}
           </div>

@@ -95,40 +95,54 @@ export default function SystemDiagram() {
 
         {/* System Benefits Grid */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12"
           variants={containerVariants}
         >
           {[
             {
               icon: '⚡',
               title: 'Unified Intelligence',
-              desc: 'One AI CEO controls all systems and makes enterprise decisions',
+              desc: 'One AI orchestrator controls all systems',
             },
             {
               icon: '🔗',
               title: 'Seamless Integration',
-              desc: 'All tools communicate through centralized orchestration layer',
+              desc: 'Stripe, Twilio, OpenAI, Claude, Supabase',
             },
             {
               icon: '🚀',
-              title: 'Autonomous Operations',
-              desc: '24/7 automation of sales, finance, and communications',
+              title: 'Autonomous 24/7',
+              desc: 'Sales, finance, and comms on autopilot',
             },
           ].map((item, idx) => (
             <motion.div
               key={idx}
-              className="p-6 rounded-xl border border-ghost-green/20 bg-ghost-dark/40 hover:border-ghost-green/50 transition-all duration-300"
+              className="p-5 rounded-lg border border-ghost-green/15 bg-ghost-dark/30 text-center"
               variants={boxVariants}
             >
-              <div className="text-3xl mb-3">{item.icon}</div>
-              <h3 className="text-lg font-bold text-ghost-green mb-2">
+              <div className="text-2xl mb-2">{item.icon}</div>
+              <h3 className="text-sm font-bold text-ghost-green mb-1">
                 {item.title}
               </h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-400 text-xs">
                 {item.desc}
               </p>
             </motion.div>
           ))}
+        </motion.div>
+
+        {/* Compact Tech Stack */}
+        <motion.div
+          className="mt-8 text-center"
+          variants={boxVariants}
+        >
+          <div className="flex flex-wrap justify-center gap-2">
+            {['Python', 'TypeScript', 'React', 'FastAPI', 'Node.js', 'Docker', 'Supabase'].map((tech) => (
+              <span key={tech} className="text-xs px-3 py-1 rounded-full bg-ghost-gray/30 border border-ghost-green/10 text-gray-400">
+                {tech}
+              </span>
+            ))}
+          </div>
         </motion.div>
       </div>
     </motion.section>

@@ -45,11 +45,9 @@ export default function Navigation() {
           {/* Nav Links */}
           <div className="hidden md:flex gap-8">
             {[
-              { label: 'Ecosystem', id: 'ecosystem' },
+              { label: 'Architecture', id: 'architecture' },
               { label: 'Solutions', id: 'solutions' },
-              { label: 'Systems', id: 'tier1' },
-              { label: 'R&D', id: 'rd-vision' },
-              { label: 'Tech', id: 'infrastructure' },
+              { label: 'Ecosystem', id: 'ecosystem' },
             ].map((link) => (
               <motion.a
                 key={link.id}
