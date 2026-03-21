@@ -43,10 +43,10 @@ export default function Solutions() {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">
           <span className="gradient-text">💼 What I Build for Clients</span>
         </h2>
-        <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-base text-gray-400 max-w-2xl mx-auto leading-relaxed">
           Ready-to-deploy AI solutions that replace entire business functions and drive revenue at scale
         </p>
       </motion.div>
@@ -67,11 +67,11 @@ export default function Solutions() {
             {/* Content */}
             <div className="relative z-10">
               {/* Icon & Title */}
-              <div className="mb-5">
-                <p className="text-5xl mb-3">{solution.icon}</p>
-                <h3 className="text-xl font-bold text-white mb-1 group-hover:text-ghost-green transition-colors">
+              <div className="mb-4">
+                <p className="text-4xl mb-2">{solution.icon}</p>
+                <div className="text-lg font-bold text-white mb-1 group-hover:text-ghost-green transition-colors">
                   {solution.title}
-                </h3>
+                </div>
               </div>
 
               {/* Impact */}

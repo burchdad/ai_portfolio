@@ -27,8 +27,6 @@ export default function Hero() {
   return (
     <>
       <section className="relative min-h-screen flex items-center justify-center pt-20 px-4 overflow-hidden">
-        {/* Ambient glow background */}
-        <div className="ambient-glow absolute inset-0 -z-10" />
         
         <motion.div
           className="text-center max-w-5xl relative z-10"
@@ -45,7 +43,7 @@ export default function Hero() {
 
           {/* Main Title - IMPACT STATEMENT */}
           <motion.h1
-            className="text-5xl md:text-7xl font-bold mb-8 gradient-text-alt leading-tight"
+            className="text-4xl md:text-6xl font-bold mb-6 gradient-text-alt leading-tight"
             variants={itemVariants}
           >
             {ecosystemData.hero.title}
@@ -53,19 +51,18 @@ export default function Hero() {
 
           {/* Subtitle */}
           <motion.p
-            className="text-xl md:text-2xl text-ghost-green font-semibold mb-6"
+            className="text-lg md:text-xl text-ghost-green font-semibold mb-4"
             variants={itemVariants}
           >
             {ecosystemData.hero.subtitle}
           </motion.p>
 
-          {/* Bio - Scannable and clear */}
-          <motion.div
-            className="max-w-2xl mx-auto mb-12 text-gray-300 text-lg leading-relaxed"
+          <motion.p
+            className="max-w-2xl mx-auto mb-10 text-gray-400 text-base leading-relaxed"
             variants={itemVariants}
           >
-            <p>{ecosystemData.hero.bio}</p>
-          </motion.div>
+            {ecosystemData.hero.bio}
+          </motion.p>
 
           {/* CTA Buttons - Premium styling */}
           <motion.div
@@ -102,9 +99,6 @@ export default function Hero() {
           </motion.div>
         </motion.div>
       </section>
-
-      {/* Visual divider between sections */}
-      <div className="section-divider" />
     </>
   );
 }

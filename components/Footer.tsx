@@ -23,10 +23,10 @@ export default function Footer() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl font-bold mb-3">
+            <div className="text-2xl font-bold mb-3">
               <span className="text-ghost-green">Ghost</span>
               <span className="text-ghost-blue"> AI</span>
-            </h2>
+            </div>
             <p className="text-sm text-gray-400">
               Autonomous systems that replace entire business functions.
             </p>
@@ -39,7 +39,7 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-sm font-bold text-ghost-lime mb-4 uppercase tracking-wider">Explore</h3>
+            <div className="text-sm font-bold text-ghost-lime mb-4 uppercase tracking-wider">Explore</div>
             <div className="space-y-2">
               {[
                 { label: 'All Repositories', url: 'https://github.com/burchdad' },
@@ -65,7 +65,7 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-sm font-bold text-ghost-lime mb-4 uppercase tracking-wider">Connect</h3>
+            <div className="text-sm font-bold text-ghost-lime mb-4 uppercase tracking-wider">Connect</div>
             <div className="space-y-2">
               {[
                 { label: 'GitHub', url: 'https://github.com/burchdad' },
@@ -92,7 +92,7 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-sm font-bold text-ghost-green mb-3 uppercase tracking-wider">Ecosystem</h3>
+            <div className="text-sm font-bold text-ghost-green mb-3 uppercase tracking-wider">Ecosystem</div>
             <div className="space-y-1 text-xs text-gray-400">
               <p><span className="text-ghost-green font-semibold">4</span> Core Platforms</p>
               <p><span className="text-ghost-blue font-semibold">5+</span> Specialized Systems</p>

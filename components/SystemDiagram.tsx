@@ -31,10 +31,10 @@ export default function SystemDiagram() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div className="text-center mb-20" variants={boxVariants}>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text-alt">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 gradient-text-alt">
             How Ghost Works
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+          <p className="text-base text-gray-400 max-w-2xl mx-auto">
             Complete autonomous operating system for enterprise AI
           </p>
         </motion.div>
@@ -121,9 +121,9 @@ export default function SystemDiagram() {
               variants={boxVariants}
             >
               <div className="text-2xl mb-2">{item.icon}</div>
-              <h3 className="text-sm font-bold text-ghost-green mb-1">
+              <div className="text-sm font-bold text-ghost-green mb-1">
                 {item.title}
-              </h3>
+              </div>
               <p className="text-gray-400 text-xs">
                 {item.desc}
               </p>
