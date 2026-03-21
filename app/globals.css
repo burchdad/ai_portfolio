@@ -1,6 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-ghost-dark: #0e0e0e;
+  --color-ghost-green: #00ffd0;
+  --color-ghost-lime: #00ff99;
+  --color-ghost-blue: #0ea2ff;
+  --color-ghost-purple: #7c3aed;
+  --color-ghost-gray: #1a1a1a;
+}
 
 :root {
   --color-green: #00ffd0;
@@ -24,56 +31,44 @@ body {
 ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: #555; }
 
-@layer components {
-  .gradient-text {
-    background: linear-gradient(to right, var(--color-green), var(--color-lime));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
+@utility gradient-text {
+  background: linear-gradient(to right, var(--color-green), var(--color-lime));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 
-  .gradient-text-alt {
-    background: linear-gradient(to right, var(--color-blue), var(--color-green));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
+@utility gradient-text-alt {
+  background: linear-gradient(to right, var(--color-blue), var(--color-green));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 
-  .btn-primary {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.75rem 2rem;
-    background-color: var(--color-green);
-    color: black;
-    font-weight: 700;
-    font-size: 0.875rem;
-    border-radius: 0.5rem;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.2s, transform 0.2s;
-  }
+@utility btn-primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  background-color: var(--color-green);
+  color: black;
+  font-weight: 700;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
 
-  .btn-primary:hover {
-    background-color: var(--color-lime);
-    transform: translateY(-1px);
-  }
-
-  .btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.75rem 2rem;
-    border: 1px solid var(--color-green);
-    border-radius: 0.5rem;
-    color: var(--color-green);
-    font-weight: 600;
-    font-size: 0.875rem;
-    background: transparent;
-    cursor: pointer;
-    transition: background-color 0.2s, transform 0.2s;
-  }
-
-  .btn-secondary:hover {
-    background-color: rgba(0, 255, 208, 0.08);
-    transform: translateY(-1px);
-  }
+@utility btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  border: 1px solid var(--color-green);
+  border-radius: 0.5rem;
+  color: var(--color-green);
+  font-weight: 600;
+  font-size: 0.875rem;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
 }
