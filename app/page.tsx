@@ -13,6 +13,7 @@ import Solutions from '@/components/Solutions';
 import RDVision from '@/components/RDVision';
 import Footer from '@/components/Footer';
 import CollapsibleSection from '@/components/CollapsibleSection';
+import RepositoryGrid from '@/components/RepositoryGrid';
 
 export default function Home() {
   return (
@@ -121,6 +122,18 @@ export default function Home() {
           viewport={{ once: true }}
         >
           <Infrastructure />
+        </motion.section>
+
+        {/* Repository Grid */}
+        <motion.section
+          id="repositories"
+          className="mb-32"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <RepositoryGrid />
         </motion.section>
       </main>
 
